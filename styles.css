@@ -1,0 +1,20 @@
+body {
+    text-align: center;
+}
+
+.image-gallery {
+    max-width: 100%;
+    margin: 0 auto; /* Center the container */
+    overflow: hidden; /* Hide any overflow content */
+    position: relative; /* Establish a positioning context */
+}
+
+img {
+    display: block; /* Make each image appear on a new line */
+    max-width: 30%; /* Decrease the size of the images */
+    height: auto;
+    margin: 20px auto; /* Add margin between images and center them horizontally */
+    border: 2px solid transparent; /* Add a transparent border */
+    transition: transform 0.3s ease; /* Add a transition effect to the transform property */
+    transform-origin: top right; /* Set the origin point for the transform */
+}
