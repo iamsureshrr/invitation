@@ -61,7 +61,7 @@ body {
 }
 
 
-@media(max-width:500px) {
+@media(max-width:1000px) {
 
     .vanakam{
         margin-top: -10rem;
