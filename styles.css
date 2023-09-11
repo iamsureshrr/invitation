@@ -2,13 +2,6 @@ body {
     text-align: center;
 }
 
-.image-gallery {
-    max-width: 100%;
-    margin: 0 auto; /* Center the container */
-    overflow: hidden; /* Hide any overflow content */
-    position: relative; /* Establish a positioning context */
-}
-
 .inv {
     display: block; /* Make each image appear on a new line */
     max-width: 40%; /* Decrease the size of the images */
