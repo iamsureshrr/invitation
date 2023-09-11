@@ -27,7 +27,7 @@ body {
 }
 .vanakam{
     position: relative;
-    margin-top: -20rem;
+    margin-top: -34rem;
     left: 0px;
     width: 15rem;
 }
@@ -61,10 +61,11 @@ body {
 }
 
 
-@media(max-width:1200px) {
+@media(max-width:500px) {
 
-    .title-first{
-        text-align: center;
+    .vanakam{
+        margin-top: -10rem;
+        width: 6rem;
     }
 
     .title-image{
