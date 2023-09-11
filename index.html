@@ -1,55 +1,561 @@
+
+ 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Marrige invite</title>
-        <!--Bootstrap and javascript -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-          crossorigin="anonymous"></script>
-        <!--css file-->
-        <link rel="stylesheet" href="styles.css">
-        <!--Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;900&family=Ubuntu:wght@700&display=swap"
-          rel="stylesheet">
-        <!--Fontawesome -->
-        <script src="https://kit.fontawesome.com/622cbe08bf.js" crossorigin="anonymous"></script>
-      </head>
+
+<head>
+
+  <!-- Common Header Start -->
+  <title>Suresh weds Jamuna</title>
+
+  
+  <meta name="description" content="Powered by Weddie - Create your Wedding Invitation today." />
+  
+
+  <meta name="author" content="Weddie">
+  <meta name="keywords" content="Wedding, Invitation, Smart, Trending, Weddie">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="apple-touch-icon" href="https://weddie.netlify.app/img/apple-touch-icon.png">
+  <link rel="shortcut icon" type="image/ico" href="https://weddie.netlify.app/img/favicon.ico" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.8/css/mdb.min.css" rel="stylesheet">
+
+
+  <meta property="og:title" content='Suresh weds Jamuna' />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name " content="Weddie" />
+  <meta property="og:url" content="http://www.getweddie.com/MtO7W1fNSxcg4dFSLXL" />
+
+
+  
+  <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/weddie-app.appspot.com/o/orders_v2%2FMtO7W1fNSxcg4dFSLXL%2Fheader%2FImage082723.jpeg?alt=media&amp;token=0de73269-9995-47a3-a14a-658a242e434d" />
+  
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116659357-2"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-116659357-2');
+      gtag('config', 'AW-809372541');
+  </script>
+  <!-- Common Header End -->
+
+  <link href="https://fonts.googleapis.com/css?family=Acme|Emilys+Candy" rel="stylesheet">  
+  <link href="https://weddie.netlify.app/css/styles-snowfall.css" rel="stylesheet">
+</head>
+
 <body>
-        <section id="title">
-            <img class="garland" src="images/garland.png" alt="Image 0">
-            <img class="vanakam" src="images/vanakam.png" alt="Image 0">
-        </section>
+  <canvas class="black" style="position: fixed; width: 100%; height: 100%; top: 0; left: 0; right: 0; bottom: 0; z-index: -2;" id="canvas"></canvas>
 
-        <section id = "image1">
-            <img class="inv" src="images/1.jpg" alt="Image 1">
+  <nav class="navbar snowfall-red fixed-top navbar-expand-xl navbar-dark">
 
-        </section>
-        <section id = "image2">
-            <img class="inv" src="images/2.jpg" alt="Image 2">
+    <a class="navbar-brand font-weight-bold" href="/">
+      Wedding Invitation
+    </a>
 
-        </section>
-        <section id = "image3">
-            <img class="inv" src="images/3.jpg" alt="Image 3">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4" aria-controls="navbarSupportedContent-4"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        </section>
-        <section id = "image4">
-            <img class="inv" src="images/4.jpg" alt="Image 4">
-
-        </section>
-        <section id = "image5">
-            <img class="inv" src="images/5.jpg" alt="Image 5">
-
-        </section>
-        <section id = "image6">
-            <img class="inv" src="images/6.jpg" alt="Image 6">
-
-        </section>
-    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item m-2" data-toggle="collapse" data-target="#navbarSupportedContent-4" >
+          <a class="nav-link font-weight-bold" href="#section_couple">
+            <i class="fa fa-heart"></i> Couple</a>
+        </li>
+        <li class="nav-item m-2" data-toggle="collapse" data-target="#navbarSupportedContent-4" >
+          <a class="nav-link font-weight-bold" href="#section_story">
+            <i class="fa fa-wpforms"></i> Story</a>
+        </li>
+        <li class="nav-item m-2" data-toggle="collapse" data-target="#navbarSupportedContent-4" >
+          <a class="nav-link font-weight-bold" href="#section_main_event">
+            <i class="fa fa-calendar"></i> Events</a>
+        </li>
+        <li class="nav-item m-2" data-toggle="collapse" data-target="#navbarSupportedContent-4" >
+          <a class="nav-link font-weight-bold" href="#section_gallery">
+            <i class="fa fa-photo"></i> Gallery</a>
+        </li>
+        <li class="nav-item m-2" data-toggle="collapse" data-target="#navbarSupportedContent-4" >
+          <a class="nav-link font-weight-bold" href="#section_location">
+            <i class="fa fa-map-marker"></i> Location</a>
+        </li>
+      </ul>
     </div>
+  </nav>
+
+  <div style="margin-top: 8em;"></div>
+
+  <div class="mt-4 container justify-content-center">        
+      <img class="dotted-border rounded mb-0 header-img" src="https://firebasestorage.googleapis.com/v0/b/weddie-app.appspot.com/o/orders_v2%2FMtO7W1fNSxcg4dFSLXL%2Fheader%2FImage082723.jpeg?alt=media&amp;token=0de73269-9995-47a3-a14a-658a242e434d" alt="Photo upload error. Email to getweddie@gmail.com"/>    
+  </div>
+
+  <div class="row justify-content-center mt-5 ml-3 mr-3">
+    <h1 class="header-couple-names text-center">Suresh &amp;
+      Jamuna</h1>
+  </div>
+
+  <div class="row justify-content-center mt-5 ml-3 mr-3">
+    <h3 class="header-invitation-text text-center h3-responsive">
+      Together with our families, We invite you to share this day of happiness!
+    </h3>
+  </div>
+
+  <hr class="style_section d-flex fluid m-5">
+
+  <div class="row justify-content-center mt-5 ml-3 mr-3">
+    <h1 class="header-couple-names text-center h1-responsive">Wedding Couple</h1>
+  </div>
+
+  <div id="section_couple" class="container mt-5">
+    <div class="row">
+      <div class="couple-wrap animate-box">
+        <div class="couple-half">
+          <div class="groom">
+            <img src="https://weddie.netlify.app/img/pair-groom.png" alt="groom" class="img-responsive">
+          </div>
+          <div class="desc-groom">
+            <h3 class="h3-responsive emily-font">Suresh</h3>
+            <p class="header-invitation-text">A Charismatic young man who always smiles proudly because he is convinced that he has accomplished something quite wonderful by persuading the woman of his dreams to marry him.</p>
+          </div>
+        </div>
+        <p class="heart text-center">
+          <i class="fa fa-heart"></i>
+        </p>
+        <div class="couple-half">
+          <div class="bride">
+            <img src="https://weddie.netlify.app/img/pair-bride.png" alt="groom" class="img-responsive">
+          </div>
+          <div class="desc-bride">
+            <h3 class="h3-responsive emily-font">Jamuna</h3>
+            <p class="header-invitation-text">A Beautiful woman with a fine prospect of happiness behind her. There is something magical about becoming the bride. There is something special about the commitment of spending the eternity with the man she loves.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <hr class="style_section d-flex fluid m-5">
+
+  <div id="section_story" class="row justify-content-center mt-5 ml-3 mr-3">
+    <h1 class="couples-title text-center h1-responsive">Our Story...</h1>
+  </div>
+
+  <div class="row justify-content-center mt-5 mb-5 ml-3 mr-3">
+    <h3 class="header-invitation-text text-center h3-responsive">
+      Once in a while, right in the middle of an ordinary life, love gives us a fairy tale.
+    </h3>
+  </div>
+
+  <div class="container justify-content-center mt-2">
+    <div class="row">
+      <div class="col-md-12 col-md-offset-0">
+        <ul class="timeline animate-box">
+          <li class="animate-box">
+            <div class="timeline-badge" style="background-image:url(https://weddie.netlify.app/img/story_first_meet_icon.png);"></div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h3 class="timeline-title">First We Met</h3>
+                <span class="date font-weight-bold grey-700">Fri, 20 Aug, 2021</span>
+              </div>
+              <div class="timeline-body">
+                <p class="grey-700">It was love at first sight. If we could only control the time, We will go back to the moment when we both first met, not to change anything, but to experience it all over again!</p>
+              </div>
+            </div>
+          </li>
+          <li class="timeline-inverted animate-box">
+            <div class="timeline-badge" style="background-image:url(https://weddie.netlify.app/img/engaged.png);"></div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h3 class="timeline-title">Engagement</h3>
+                <span class="date font-weight-bold grey-700">Sun, 21 Nov, 2021</span>
+              </div>
+              <div class="timeline-body">
+                <p class="grey-700">Some knots are meant to be tied forever. Here is our sweet and smooth journey towards eternity holding each other&#39;s hand. Two souls with but a single thought; two hearts that started beating as one.</p>
+              </div>
+            </div>
+          </li>
+          <li class="animate-box">
+            <div class="timeline-badge" style="background-image:url(https://weddie.netlify.app/img/story_pre_wedding.png);"></div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h3 class="timeline-title">Wedding...</h3>
+                <span class="date font-weight-bold grey-700">Thu, 20 Jan, 2022</span>
+              </div>
+              <div class="timeline-body">
+                <p class="grey-700">The best part of the life is spending each and every day with the fiance, Going on a date, shopping your wedding dress, eagerness of waiting for the big day!</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr class="style_section d-flex fluid m-5">
+
+  <div id="section_main_event" class="row justify-content-center mt-5 ml-3 mr-3">
+    <h1 class="couples-title text-center h1-responsive">Main Events</h1>
+  </div>
+
+  <div class="row justify-content-center mt-5 ml-1 mr-1">
+
+    
+  
+    <div class="card snowfall-red lighten-1 text-center z-depth-2 justify-content-center m-3 p-2 col-xs-12 col-md-4">
+      <div class="card_title">
+        <br>
+        <h2 class="main-events-title text-center h2-responsive">Reception</h2>
+      </div>
+      <hr class="white">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-5 justify-content-center">
+            <span class="main-event-icon fa fa-clock-o"></span>
+            <br>
+            <br>
+            <span class="white-text text-monospace font-weight-bold h5-responsive mt-2">
+              06:30 pm
+            </span>
+          </div>
+          <div class="col-7 justify-content-center">
+            <span class="main-event-icon fa fa-calendar"></span>
+            <br>
+            <br>
+            <span class="white-text text-monospace font-weight-bold h5-responsive mt-2">
+              Wed, 19 Jan, 2022
+            </span>
+          </div>
+          <br>
+        </div>
+        <p class="white-text h5-responsive mt-4 mb-2 ml-2 mr-2">
+          RK Mahal Thirumana Mandabam 
+        </p>
+      </div>
+    </div>
+    
+
+
+    <div class="card snowfall-red lighten-1 text-center z-depth-2 justify-content-center m-3 p-2 col-xs-12 col-md-4">
+      <div class="card_title">
+        <br>
+        <h2 class="main-events-title text-center h2-responsive">Wedding</h2>
+      </div>
+      <hr class="white">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-5 justify-content-center">
+            <span class="main-event-icon fa fa-clock-o"></span>
+            <br>
+            <br>
+            <span class="white-text text-monospace font-weight-bold h5-responsive mt-2">
+              09:00 am
+            </span>
+          </div>
+          <div class="col-7 justify-content-center">
+            <span class="main-event-icon fa fa-calendar"></span>
+            <br>
+            <br>
+            <span class="white-text text-monospace font-weight-bold h5-responsive mt-2">
+              Thu, 20 Jan, 2022
+            </span>
+          </div>
+          <br>
+        </div>
+        <p class="white-text h5-responsive mt-4 mb-2 ml-2 mr-2">
+          RK Mahal Thirumana Mandabam 
+        </p>
+      </div>
+    </div>
+  </div>
+
+  
+
+  
+  
+    <hr class="style_section d-flex fluid m-5">
+
+  <div id="section_gallery" class="row justify-content-center mt-5 ml-3 mr-3">
+    <h1 class="couples-title text-center h1-responsive">Photo Gallery</h1>
+  </div>
+
+  <div class="row justify-content-center mt-5 ml-3 mr-3">
+    <h3 class="header-invitation-text text-center h3-responsive">
+      From this day forward, you shall not walk alone. My heart will be your Shelter, And my arms will be your Home...
+    </h3>
+  </div>
+
+  <div class="row justify-content-center mt-5 mb-5 ml-3 mr-3">
+      
+      
+      <figure class="snip1580"><img src="https://firebasestorage.googleapis.com/v0/b/weddie-app.appspot.com/o/orders_v2%2FMtO7W1fNSxcg4dFSLXL%2Fgallery%2Fgroom%2FImage244883.jpeg?alt=media&amp;token=0efa12d8-5c19-45aa-a561-4925c212124e" alt="gallery"/>
+        <figcaption>
+          <h3>Suresh</h3>
+          <p>
+            
+              <span>B-Tech </span>
+              <br>
+            
+
+            
+              <span>S/O Mrs Kalaivani &amp; Mr Vadivel</span>
+            
+            </p>
+          </figcaption>
+      </figure>
+    
+      
+      <figure class="snip1580"><img src="https://firebasestorage.googleapis.com/v0/b/weddie-app.appspot.com/o/orders_v2%2FMtO7W1fNSxcg4dFSLXL%2Fgallery%2Fbride%2FImage185360.jpeg?alt=media&amp;token=524ce0bb-4664-4df7-8904-d452ded805aa" alt="gallery"/>
+        <figcaption>
+          <h3>Jamuna</h3>
+          <p>
+            
+              <span>Bsc</span>
+              <br>
+              
+    
+              
+              <span>D/O Mrs Deivanai &amp; Mr Anbu</span>
+              
+            </p>
+          </figcaption>
+      </figure>
+
+      
+      
+      <figure class="snip1580"><img src="https://firebasestorage.googleapis.com/v0/b/weddie-app.appspot.com/o/orders_v2%2FMtO7W1fNSxcg4dFSLXL%2Fgallery%2Fbride-groom%2FImage205423.jpeg?alt=media&amp;token=8a0ecfed-c16c-4523-9874-fa83ef2f6977" alt="gallery"/>
+        <figcaption>
+          <h3>Suresh &amp;
+            Jamuna</h3>
+            <p>
+              <span>Beautiful Wedding coming soon...</span>
+              <br>
+              <span>&nbsp;</span>
+            </p>
+          </figcaption>
+      </figure>
+  </div>
+  
+
+
+  
+    <hr class="style_section d-flex fluid m-5">
+
+  <div id="section_location" class="row justify-content-center mt-5 mb-5 ml-3 mr-3">
+    <h1 class="couples-title text-center h1-responsive">Invitation Video</h1>
+  </div>
+
+  <div class="container embed-responsive embed-responsive-16by9 justify-content-center text-center">
+    <iframe class="embed-responsive-item justify-content-center text-center" src="https://www.youtube.com/embed/OeOpKUVVl2Q?controls=0&modestbranding=1&rel=0&fs=1" allowfullscreen></iframe>
+  </div>
+  
+
+  
+  <hr class="style_section d-flex fluid m-5">
+
+  <div id="section_location" class="row justify-content-center mt-5 mb-5 ml-3 mr-3">
+    <h1 class="couples-title text-center h1-responsive">Wedding Location</h1>
+  </div>
+
+  <!-- <div class="google_map p-2" id="google_map">
+  </div> -->
+
+  <style>
+    .maps-embed-container {
+      position: relative;
+      width: 100%;
+      height: 500px;
+    }
+
+    .maps-embed-view {
+      width: 100%;
+      height: 500px;
+    }
+  </style>
+
+  <div class="maps-embed-container">
+    <iframe
+      class="maps-embed-view"
+      width="450"
+      height="250"
+      frameborder="0" style="border:0"
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyABxK2v1LCL8hJ1TlT8IX58UIhV-zQb5m0&q=12.6081392,80.0546877&center=12.6081392,80.0546877&zoom=18" >
+    </iframe>    
+  </div>  
+  
+
+
+  <footer class="page-footer snowfall-red font-small">
+    <div class="footer-copyright text-white text-center py-3">© 2023 Copyright:
+      <a href="/" target="_blank"> www.getweddie.com</a>
+      &nbsp; | &nbsp;
+      <a href="https://play.google.com/store/apps/details?id=com.getweddie.app" target="_blank">
+        <i class="fa fa-android" aria-hidden="true"></i>
+      </a> &nbsp; &nbsp;
+      <a href="https://www.facebook.com/getweddie/" target="_blank">
+        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+      </a>
+    </div>
+  </footer>
+
+  
+   <!-- Google maps script -->
+   <script>
+    function initMap() {
+      var uluru = {
+        lat: Number('12.6081392'),
+        lng: Number('80.0546877')
+      };
+      var mapScript = {
+        zoom: 18,
+        center: uluru,
+        mapTypeControl: false,
+        zoomControl: false,
+        streetViewControl: false,
+        styles: [
+            {
+                "featureType": "landscape",
+                "stylers": [
+                    {
+                        "saturation": -100
+                    },
+                    {
+                        "lightness": 60
+                    }
+                ]
+            },
+            {
+                "featureType": "road.local",
+                "stylers": [
+                    {
+                        "saturation": -100
+                    },
+                    {
+                        "lightness": 40
+                    },
+                    {
+                        "visibility": "on"
+                    }
+                ]
+            },
+            {
+                "featureType": "transit",
+                "stylers": [
+                    {
+                        "saturation": -100
+                    },
+                    {
+                        "visibility": "simplified"
+                    }
+                ]
+            },
+            {
+                "featureType": "administrative.province",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "water",
+                "stylers": [
+                    {
+                        "visibility": "on"
+                    },
+                    {
+                        "lightness": 30
+                    }
+                ]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "geometry.fill",
+                "stylers": [
+                    {
+                        "color": "#ef8c25"
+                    },
+                    {
+                        "lightness": 40
+                    }
+                ]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "geometry.stroke",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi.park",
+                "elementType": "geometry.fill",
+                "stylers": [
+                    {
+                        "color": "#b6c54c"
+                    },
+                    {
+                        "lightness": 40
+                    },
+                    {
+                        "saturation": -40
+                    }
+                ]
+          },
+          {}
+      ]};
+
+      var map = new google.maps.Map(document.getElementById('google_map'), mapScript);
+
+      var marker = new google.maps.Marker({
+        icon: 'https://weddie.netlify.app/img/marker-dot.png',
+        position: uluru,
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', function () {
+        var win = window.open(marker.map.mapUrl, '_blank');
+        win.focus();
+      });   
+
+    }
+  </script>
+
+  <!-- Common Footer Start -->
+  
+
+  <!-- 
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeliJYHvYOeYDInvhRpXa7r08MSPVH8hk&callback=initMap"> </script>
+   -->
+
+  <!-- 
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJojN__romtYUz5sTKLgVRjvYQJ3Fx9vI&callback=initMap"> </script>
+   -->
+  
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/popper.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.8/js/mdb.min.js"></script>
+
+  
+  <!-- Common Footer End -->
+
+
+  <script type="text/javascript" src="https://weddie.netlify.app/js/snowfall.js"></script>
+  <script src="https://weddie.netlify.app/js/simplyCountdown.js"></script>
+
+  
+
 </body>
 </html>
