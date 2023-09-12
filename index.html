@@ -508,14 +508,14 @@
   height: 40px;
   border-radius: 50%;
   position: fixed;
-  z-index: 300;
+  z-index: 800;
   transform:  scale(0);
-  cursor: pointer;
+  cursor: all-scroll;
 }
 
 .nd1{
   background: #d3a411;
-  right: 40px;
+  right: 50px;
   bottom: 120px;
   animation-delay: 0.2s;
     animation: bounce-out-nds 0.3s linear;
@@ -523,7 +523,7 @@
 }
 
 .nd3{
-  right: 40px;
+  right: 50px;
   bottom: 180px;
   animation-delay: 0.15s;
     animation: bounce-out-nds 0.15s linear;
@@ -531,7 +531,7 @@
 }
 
 .nd4{
-  right: 40px;
+  right: 50px;
   bottom: 240px;
   animation-delay: 0.1s;
     animation: bounce-out-nds 0.1s linear;
@@ -639,17 +639,25 @@
             });
         });
     </script>
-    <div id="container-floating">
-        <div class="nd4 nds"><img class="reminder" src="map (2).png">
-        <!--  <p class="letter">Direction</p> -->
-        </div>
-        
-        <div class="nd3 nds"><img class="reminder" src="whats.png" /></div>
-        
-        <div class="nd1 nds">
-          <p class="letter">E</p>
-          <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_MbPdB0yZerID2B" async> </script> </form>
-        </div>
+   <div id="container-floating">
+    <div class="nd4 nds">
+        <a href="https://goo.gl/maps/uiKgw1T8QD5TWMm58" target="_blank">
+            <img class="reminder" src="ggmap.png" alt="Google Maps">
+        </a>
+    </div>
+    
+    <div class="nd3 nds">
+        <a href="https://api.whatsapp.com/send?phone=8778096977" target="_blank">
+            <img class="reminder" src="whats.png" alt="WhatsApp">
+        </a>
+    </div>
+    
+    <div class="nd1 nds">
+        <a href="QR.png" target="_blank">
+            <img class="reminder" src="ggpay.png" alt="Image">
+        </a>
+    </div>
+</div>
       
         <div id="floating-button">
           <p class="plus">+</p>
