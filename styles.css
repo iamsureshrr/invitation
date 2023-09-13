@@ -7,17 +7,11 @@
     -moz-osx-font-smoothing: grayscale;}
 
 /* Add this CSS to vertically center the carousel controls */
-.carousel-control-prev,
-.carousel-control-next {
-    top: 50%;
-    transform: translateY(720%);
-}
 
 /* Add this CSS to vertically center the carousel indicators */
 .carousel-indicators {
-    bottom: 20px; /* Adjust the bottom spacing as needed */
+    bottom: -45px; /* Adjust the bottom spacing as needed */
 }
-
 
     .maps-embed-container {
       position: relative;
