@@ -26,7 +26,7 @@
 
 <body>
     <!-- Body and Navbar -->
-    <canvas class="black" style="position: fixed; width: 100%; height: 100%; top: 0; left: 0; right: 0; bottom: 0; z-index: -2;"id="canvas"></canvas>
+    <canvas class="black" style="position: fixed; width: 100%; height: 100%; top: 0%; left: 0; right: 0; bottom: 0; z-index: -2;"id="canvas"></canvas>
 
     <nav class="navbar snowfall-red fixed-top navbar-expand-xl navbar-dark">
         <a class="navbar-brand font-weight-bold" href="/">Wedding Invitation</a>
@@ -63,7 +63,7 @@
     <div style="margin-top: 8em;"></div>
 
     <div class="mt-4 container justify-content-center">
-        <img class="dotted-border rounded mb-0 header-img" src="ponnu_paiyan.jpg" alt="Photo upload error" />
+        <img class="dotted-border rounded mb-0 header-img" src="ponnu_paiyan1.jpg" alt="Photo upload error" />
     </div>
 
     <div class="row justify-content-center mt-5 ml-3 mr-3">
@@ -76,13 +76,13 @@
         </h3>
     </div>
     <!-- Suresh and Mahalakshmi Ends -->
-    <hr class="style_section d-flex fluid m-5">
+    <hr id="section_couple" class="style_section d-flex fluid m-5 offset-scroll">
     <!-- Wedding Couple -->
-    <div class="row justify-content-center mt-5 ml-3 mr-3">
+    <div  class="row justify-content-center mt-5 ml-3 mr-3">
         <h1 class="header-couple-names text-center h1-responsive">Wedding Couple</h1>
     </div>
 
-    <div id="section_couple" class="container mt-5">
+    <div  class="container mt-5">
         <div class="row">
             <div class="couple-wrap animate-box">
                 <div class="couple-half">
@@ -112,9 +112,9 @@
         </div>
     </div>
     <!-- Wedding Couple Ends-->
-    <hr class="style_section d-flex fluid m-5">
+    <hr id="section_story" class="style_section d-flex fluid m-5">
     <!-- Our Story -->
-    <div id="section_story" class="row justify-content-center mt-5 ml-3 mr-3">
+    <div  class="row justify-content-center mt-5 ml-3 mr-3">
         <h1 class="couples-title text-center h1-responsive">Our Story...</h1>
     </div>
 
@@ -175,9 +175,9 @@
         </div>
     </div>
     <!-- Our Story Ends -->
-    <hr class="style_section d-flex fluid m-5">
+    <hr id="section_main_event" class="style_section d-flex fluid m-5">
     <!-- Main Events -->
-    <div id="section_main_event" class="row justify-content-center mt-5 ml-3 mr-3">
+    <div  class="row justify-content-center mt-5 ml-3 mr-3">
         <h1 class="couples-title text-center h1-responsive">Main Events</h1>
     </div>
 
@@ -235,9 +235,9 @@
         </div>
     </div>
     <!-- Main Events Ends -->
-    <hr class="style_section d-flex fluid m-5">
+    <hr id="section_gallery" class="style_section d-flex fluid m-5">
     <!-- Photo Gallery -->
-    <div id="section_gallery" class="row justify-content-center mt-5 ml-3 mr-3">
+    <div  class="row justify-content-center mt-5 ml-3 mr-3">
         <h1 class="couples-title text-center h1-responsive">Photo Gallery</h1>
     </div>
 
@@ -282,9 +282,9 @@
         </figure>
     </div>
     <!-- Photo Gallery -->
-    <hr class="style_section d-flex fluid m-5">
+    <hr id="section_invitation" class="style_section d-flex fluid m-5">
     <!-- Traditional Invitation -->
-    <div id="section_invitation" class="row justify-content-center mt-5 mb-5 ml-3 mr-3">
+    <div  class="row justify-content-center mt-5 mb-5 ml-3 mr-3">
         <h1 class="couples-title text-center h1-responsive">Traditional Invitation</h1>
     </div>
     <a href="invite/Suresh_Mahalakshmi.pdf" target="_blank" download>
@@ -344,9 +344,9 @@
     
     
     <!-- Traditional Invitation Ends-->
-    <hr class="style_section d-flex fluid m-5">
+    <hr id="section_location" class="style_section d-flex fluid m-5">
     <!-- Wedding Location -->
-    <div id="section_location" class="row justify-content-center mt-5 mb-5 ml-3 mr-3">
+    <div  class="row justify-content-center mt-5 mb-5 ml-3 mr-3">
         <h1 class="couples-title text-center h1-responsive">Wedding Location</h1>
     </div>
 
@@ -435,7 +435,11 @@
 </script>
     <!-- Common Footer End -->
 
-
+    <script>
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+    </script>
   <script type="text/javascript" src="https://weddie.netlify.app/js/snowfall.js"></script>
   <script src="https://weddie.netlify.app/js/simplyCountdown.js"></script>
 

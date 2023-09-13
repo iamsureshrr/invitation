@@ -6,8 +6,16 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;}
 
-/* Add this CSS to vertically center the carousel controls */
+/* Smooth scrolling behavior */
+html {
+    scroll-behavior: smooth;
+}
+.h1-responsive{
+    padding-top: 20px; /* Adjust the padding-top value to match your navbar height */
+}
 
+    
+   
 /* Add this CSS to vertically center the carousel indicators */
 .carousel-indicators {
     bottom: -45px; /* Adjust the bottom spacing as needed */
