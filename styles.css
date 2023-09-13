@@ -1,3 +1,11 @@
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;}
+
 /* Add this CSS to vertically center the carousel controls */
 .carousel-control-prev,
 .carousel-control-next {
