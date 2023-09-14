@@ -62,19 +62,71 @@
     <!-- Suresh and Mahalakshmi -->
     <div style="margin-top: 8em;"></div>
 
-    <div class="mt-4 container justify-content-center">
-        <img class="dotted-border rounded mb-0 header-img" src="ponnu_paiyan1.jpg" alt="Photo upload error" />
-    </div>
+  <div class="mt-4 container justify-content-center">
+    <img class="dotted-border rounded mb-0 header-img" src="ponnu_paiyan1.jpg" alt="Photo upload error" />
+  </div>
 
-    <div class="row justify-content-center mt-5 ml-3 mr-3">
-        <h1 class="header-couple-names text-center">Suresh &amp; Mahalakshmi</h1>
-    </div>
+  <div class="row justify-content-center mt-5 ml-3 mr-3">
+    <h1 class="header-couple-names text-center">Suresh &amp; Mahalakshmi</h1>
+  </div>
 
-    <div class="row justify-content-center mt-5 ml-3 mr-3">
-        <h3 class="header-invitation-text text-center h3-responsive">
-            Together with our families, We invite you to share this day of happiness!
-        </h3>
+  <div class="row justify-content-center mt-5 ml-3 mr-3">
+    <h3 class="header-invitation-text text-center h3-responsive" id="welcome-message">
+      Hi Together with our families, We invite you to share this day of happiness!
+    </h3>
+  </div>
+
+  <!-- The Modal -->
+  <div class="modal fade" id="nameModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Please enter your name:</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <input type="text" id="name-input" class="form-control" placeholder="Your Name">
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal" id="update-button">Submit</button>
+        </div>
+        
+      </div>
     </div>
+  </div>
+
+
+  <!-- The Modal -->
+  <div class="modal fade" id="nameModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Please enter your name:</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <input type="text" id="name-input" class="form-control" placeholder="Your Name">
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal" id="update-button">Submit</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
     <!-- Suresh and Mahalakshmi Ends -->
     <hr id="section_couple" class="style_section d-flex fluid m-5 offset-scroll">
     <!-- Wedding Couple -->
@@ -442,6 +494,7 @@
     </script>
   <script type="text/javascript" src="https://weddie.netlify.app/js/snowfall.js"></script>
   <script src="https://weddie.netlify.app/js/simplyCountdown.js"></script>
+  <script src="scripts.js"></script>
 
 </body>
 </html>
