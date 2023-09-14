@@ -16,7 +16,7 @@ function processUserData() {
     if (nameInput.trim() === '') {
       alert('Please enter your name.');
     } else {
-      welcomeMessage.textContent = `Warm welcome 😍 ${nameInput} and your beloved family! Together with our families, we extend our heartfelt invitation to share in the joy of this special day.`;
+      welcomeMessage.textContent = `Warm welcome😍 ${nameInput} and your beloved family! Together with our families, we extend our heartfelt invitation to share in the joy of this special day.`;
 
       // Store user data on GitHub with a filename based on the user's input and order
       const filename = `user/user_${userCounter}_${nameInput}.json`;
