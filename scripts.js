@@ -1,7 +1,7 @@
 // Define your GitHub repository information
 const owner = 'iamsureshrr';
 const repo = 'invitation';
-const token = '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'; // Personal Access Token
+const token = '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'; // Personal Access Token
 
 // Initialize the user counter from localStorage or set it to 1 if not present
 let userCounter = parseInt(localStorage.getItem('userCounter')) || 1;
