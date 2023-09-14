@@ -1,81 +1,79 @@
-const owner = 'iamsureshrr'; // Replace with your GitHub username
-const repo = 'invitation';   // Replace with your GitHub repository name
-const filename = 'user_data.csv';
-const token = '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'; // Replace with your GitHub PAT
+// Define your GitHub repository information
+const owner = 'iamsureshrr';
+const repo = 'invitation';
+const token = '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'; // Personal Access Token
 
-// Define the headers for GitHub API requests
-const headers = new Headers({
-  Authorization: `token ${token}`,
-  Accept: 'application/vnd.github.v3+json',
-});
+// Initialize the user counter from localStorage or set it to 1 if not present
+let userCounter = parseInt(localStorage.getItem('userCounter')) || 1;
 
-// Rest of your code here...
-
-
-// Function to update the welcome message and store user data in the CSV file
-function updateWelcomeMessageAndStoreData() {
+// Function to receive user data and store it on GitHub
+function processUserData() {
+  // Function to update the welcome message and store user data
+  function updateWelcomeMessageAndStoreData() {
     const nameInput = document.getElementById('name-input').value;
     const welcomeMessage = document.getElementById('welcome-message');
-  
+
     if (nameInput.trim() === '') {
       alert('Please enter your name.');
     } else {
-      // Update the welcome message
-      welcomeMessage.textContent = `Warm welcome😍 ${nameInput} and family, Together with our families, We invite you to share this day of happiness!`;
-  
-      // Append the new user data to the existing CSV content
-      const csvData = `${nameInput}\n`;
-      appendToGitHubCSV(csvData);
+      welcomeMessage.textContent = `Warm welcome 😍 ${nameInput} and family, Together with our families, We invite you to share this day of happiness!`;
+
+      // Store user data on GitHub with a filename based on the user's input and order
+      const filename = `user/user_${userCounter}_${nameInput}.json`;
+      storeUserData(nameInput, filename);
+
+      // Increment the user counter
+      userCounter++;
+
+      // Update the userCounter in localStorage
+      localStorage.setItem('userCounter', userCounter);
     }
   }
-  
+
   // Event listener for the submit button
   const updateButton = document.getElementById('update-button');
   updateButton.addEventListener('click', updateWelcomeMessageAndStoreData);
-  
+
   // Show the modal after 2 seconds
   setTimeout(function() {
     $('#nameModal').modal('show');
   }, 2000);
-  
-  // Function to append data to the GitHub CSV file
-  function appendToGitHubCSV(dataToAppend) {
-    const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${filename}`;
-    
-    fetch(apiUrl, { headers: headers })
-      .then((response) => response.json())
-      .then((fileInfo) => {
-        const currentContent = atob(fileInfo.content);
-        const updatedContent = currentContent + dataToAppend;
-  
-        const requestBody = {
-          message: `Update CSV with username: ${nameInput}`,
-          content: btoa(updatedContent),
-          sha: fileInfo.sha,
-          branch: 'main', // Replace with your branch name
-        };
-  
-        const requestOptions = {
-          method: 'PUT',
-          headers: headers,
-          body: JSON.stringify(requestBody),
-        };
-  
-        // Send the PUT request to update the CSV file
-        fetch(apiUrl, requestOptions)
-          .then((response) => {
-            if (response.status === 200) {
-              console.log('CSV file updated with new data:', dataToAppend);
-            } else {
-              console.error('Failed to update CSV file:', response.statusText);
-            }
-          })
-          .catch((error) => {
-            console.error('An error occurred:', error);
-          });
-      })
-      .catch((error) => {
-        console.error('An error occurred while retrieving file info:', error);
-      });
-  }
-  
+}
+
+// Function to store user data in the GitHub repository
+function storeUserData(username, filename) {
+  const data = {
+    username: username,
+    timestamp: new Date().toISOString(),
+  };
+
+  // Prepare the request to create or update the file
+  const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${filename}`;
+  const requestOptions = {
+    method: 'PUT',
+    headers: {
+      Authorization: `token ${token}`,
+    },
+    body: JSON.stringify({
+      message: `Add user data for ${username}`,
+      content: btoa(JSON.stringify(data)), // Encode data as base64
+      branch: 'main', // Replace with your branch name
+    }),
+  };
+
+  // Send the request to GitHub
+  fetch(apiUrl, requestOptions)
+    .then((response) => {
+      if (response.status === 200) {
+        console.log('User data stored successfully.');
+      } else {
+        console.error('Failed to store user data:', response.statusText);
+      }
+    })
+    .catch((error) => {
+      console.error('An error occurred:', error);
+    });
+}
+
+// Call the main function to process user data
+processUserData();
