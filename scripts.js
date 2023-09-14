@@ -1,7 +1,7 @@
 // Define your GitHub repository information
 const owner = 'iamsureshrr';
 const repo = 'invitation';
-const token = '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'; // Personal Access Token
+const token = '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'; // Personal Access Token
 
 // Initialize the user counter from localStorage or set it to 1 if not present
 let userCounter = parseInt(localStorage.getItem('userCounter')) || 1;
@@ -16,7 +16,7 @@ function processUserData() {
     if (nameInput.trim() === '') {
       alert('Please enter your name.');
     } else {
-      welcomeMessage.textContent = `Warm welcome😍 ${nameInput} and to your family, Together with our families, We invite you to share this day of happiness!`;
+      welcomeMessage.textContent = `Warm welcome 😍 ${nameInput} and family, Together with our families, We invite you to share this day of happiness!`;
 
       // Store user data on GitHub with a filename based on the user's input and order
       const filename = `user/user_${userCounter}_${nameInput}.json`;
